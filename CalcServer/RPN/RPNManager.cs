@@ -1,11 +1,10 @@
-using System;
 
 namespace Calculator
 {
-    class RPNManager
+    public class RPNManager
     {
         // RPN calculator attached to the manager
-        RPN calc;
+        private RPN calc;
         public RPN Calculator {
             get { return calc; }
         }

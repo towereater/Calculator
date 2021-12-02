@@ -1,17 +1,16 @@
-using System;
 
 namespace Calculator
 {
-    class RPN
+    public class RPN
     {
         // Number of registers of the calculator
-        readonly int regNum;
+        private readonly int regNum;
         public int RegistersNumber {
             get { return regNum; }
         }
 
         // Actual registers of the calculator
-        double[] regs;
+        private double[] regs;
         public double[] Registers {
             get { return regs; }
         }
