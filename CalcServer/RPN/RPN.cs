@@ -13,6 +13,7 @@ namespace Calculator
         private double[] regs;
         public double[] Registers {
             get { return regs; }
+            private set { regs = value; }
         }
 
         // Constructs a calculator with the default number of registers
