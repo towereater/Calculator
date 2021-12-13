@@ -93,11 +93,7 @@ namespace Calculator
         // Prints the value of the first two registers
         public override string ToString()
         {
-            return string.Format(
-                "Y: {0}\nX: {1}",
-                regs[1],
-                regs[0]
-            );
+            return $"Y: {regs[1]}\nX: {regs[0]}";
         }
     }
 }
