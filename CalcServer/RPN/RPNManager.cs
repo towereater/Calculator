@@ -18,10 +18,10 @@ namespace Calculator
         // Interprets a string of operations by executing each instruction
         public void Interpret(string code)
         {
-            string[] comms = code.Split(' ');
+            string[] comms = code.Split(' ', StringSplitOptions.RemoveEmptyEntries);
             
-            for (int i = 0; i < comms.Length; i++)
-                Execute(comms[i]);
+            foreach (string comm in comms)
+                Execute(comm);
         }
 
         // Runs a command depending on the calculator depending
@@ -45,7 +45,7 @@ namespace Calculator
                 calc.Divide();
             }
             else {
-                throw new ArgumentException("Cannot execute the command: " + comm);
+                throw new ArgumentException($"Cannot execute the command: {comm}");
             }
         }
     }
